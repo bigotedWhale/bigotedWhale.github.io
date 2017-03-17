@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://p1.bpimg.com/567571/a3d733e6da2da263.png">
 <meta property="og:image" content="http://p1.bqimg.com/567571/88e79c94abb1f333.png">
 <meta property="og:image" content="http://i1.piimg.com/567571/8c24cd463701909d.png">
-<meta property="og:updated_time" content="2017-03-17T07:48:47.000Z">
+<meta property="og:updated_time" content="2017-03-17T07:51:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客之路">
 <meta name="twitter:description" content="前言最近有人问我创建个人博客有什么方案，于是自己也就摸索了一番，最后选择了通过github page作为载体，以Hexo为实现方式，以git，npm作为工具，最后通过实践确定为切实可行的方案，于是在里记录下来
@@ -287,7 +287,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T15:48:47+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T15:51:02+08:00">
                 2017-03-17
               </time>
             
@@ -357,16 +357,9 @@
 <p>接下来就可以在localhost:4000查看本地的博客效果啦  </p>
 <h5 id="发布到GitHub"><a href="#发布到GitHub" class="headerlink" title="发布到GitHub"></a>发布到GitHub</h5><h6 id="创建空仓库"><a href="#创建空仓库" class="headerlink" title="创建空仓库"></a>创建空仓库</h6><p><img src="http://p1.bpimg.com/567571/a3d733e6da2da263.png" alt="png"></p>
 <h6 id="复制仓库地址"><a href="#复制仓库地址" class="headerlink" title="复制仓库地址"></a>复制仓库地址</h6><p><img src="http://p1.bqimg.com/567571/88e79c94abb1f333.png" alt=""></p>
-<h6 id="修改站点配置文件-1"><a href="#修改站点配置文件-1" class="headerlink" title="修改站点配置文件"></a>修改<font style="background:purple;color:#fff;padding:2px 3px;font-size:12px;font-weight:normal;">站点配置文件</font></h6><pre><code class="bash">deploy:
-  <span class="built_in">type</span>: git
-  repo: git@github.com:bigotedWhale/bigotedwhale.github.io.git
-</code></pre>
-<h6 id="安装hexo-deployer-git"><a href="#安装hexo-deployer-git" class="headerlink" title="安装hexo-deployer-git"></a>安装hexo-deployer-git</h6><pre><code class="bash">$ npm install hexo-deployer-git --save
-</code></pre>
-<h6 id="发布到github"><a href="#发布到github" class="headerlink" title="发布到github"></a>发布到github</h6><pre><code class="bash">$ hexo clean
-$ hexo g
-$ hexo d  <span class="comment"># 发布到git@github.com:bigotedWhale/bigotedwhale.github.io.git</span>
-</code></pre>
+<h6 id="修改站点配置文件-1"><a href="#修改站点配置文件-1" class="headerlink" title="修改站点配置文件"></a>修改<font style="background:purple;color:#fff;padding:2px 3px;font-size:12px;font-weight:normal;">站点配置文件</font></h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: git@github.com:bigotedWhale/bigotedwhale.github.io.git</div></pre></td></tr></table></figure>
+<h6 id="安装hexo-deployer-git"><a href="#安装hexo-deployer-git" class="headerlink" title="安装hexo-deployer-git"></a>安装hexo-deployer-git</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<h6 id="发布到github"><a href="#发布到github" class="headerlink" title="发布到github"></a>发布到github</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo g</div><div class="line">$ hexo d  <span class="comment"># 发布到git@github.com:bigotedWhale/bigotedwhale.github.io.git</span></div></pre></td></tr></table></figure>
 <h6 id="发布GitHub-page"><a href="#发布GitHub-page" class="headerlink" title="发布GitHub page"></a>发布GitHub page</h6><p><img src="http://i1.piimg.com/567571/8c24cd463701909d.png" alt=""><br>选择主题后发布即可</p>
 <h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>这里主要提供了一个思路，自己也搭了几天，感觉要详细写下来太多了，有兴趣的可以和我沟通。</p>
 
