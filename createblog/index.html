@@ -90,11 +90,13 @@
 <meta property="og:site_name" content="干锅田鸡">
 <meta property="og:description" content="前言最近有人问我创建个人博客有什么方案，于是自己也就摸索了一番，最后选择了通过github page作为载体，以Hexo为实现方式，以git，npm作为工具，最后通过实践确定为切实可行的方案，于是在里记录下来
 简介Hexo:我将其理解为一个转换器，以markdown的方式记录笔记，hexo整合主题将markdown转换为html页面，最后发布到GitHub上npm:安装一些所需依赖git:管理本地">
-<meta property="og:updated_time" content="2017-03-14T13:38:41.000Z">
+<meta property="og:image" content="http://i1.piimg.com/567571/8c24cd463701909d.png">
+<meta property="og:updated_time" content="2017-03-17T07:26:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客之路">
 <meta name="twitter:description" content="前言最近有人问我创建个人博客有什么方案，于是自己也就摸索了一番，最后选择了通过github page作为载体，以Hexo为实现方式，以git，npm作为工具，最后通过实践确定为切实可行的方案，于是在里记录下来
 简介Hexo:我将其理解为一个转换器，以markdown的方式记录笔记，hexo整合主题将markdown转换为html页面，最后发布到GitHub上npm:安装一些所需依赖git:管理本地">
+<meta name="twitter:image" content="http://i1.piimg.com/567571/8c24cd463701909d.png">
 
 
 
@@ -283,8 +285,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-14T21:38:41+08:00">
-                2017-03-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T15:26:13+08:00">
+                2017-03-17
               </time>
             
 
@@ -344,9 +346,15 @@
 </ul>
 <h5 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div></pre></td></tr></table></figure>
 <h5 id="创建博客文件夹"><a href="#创建博客文件夹" class="headerlink" title="创建博客文件夹"></a>创建博客文件夹</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> &lt;workspace&gt;</div><div class="line">$ mkdir yourname.github.io</div><div class="line">$ git init</div><div class="line">$ hexo init</div></pre></td></tr></table></figure>
-<p>以上命令将创建一个代码仓库用于存储源代码，通过 hexo init 初始化工程目录，目录结构如下:<br>—public<br>—scafolds<br>—source<br>—themes  </p>
+<p>以上命令将创建一个代码仓库用于存储源代码，通过 hexo init 初始化工程目录，目录结构如下:<br>—public<br>—scafolds<br>—source<br>&nbsp;&nbsp;&nbsp;&nbsp;—_posts  存放写的博客<br>—themes  </p>
 <h5 id="clone主题文件"><a href="#clone主题文件" class="headerlink" title="clone主题文件"></a>clone主题文件</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> yourname.github.io</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
-<p>以上命令将主题文件clone到themes目录下</p>
+<p>以上命令将主题文件clone到themes目录下,接下来  </p>
+<h6 id="修改站点配置文件"><a href="#修改站点配置文件" class="headerlink" title="修改站点配置文件"></a>修改<font style="background:purple;color:#fff;padding:2px 3px;font-size:12px;font-weight:normal;">站点配置文件</font></h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">title: 干锅田鸡               <span class="comment"># 网站标题</span></div><div class="line">subtitle: 有成当作雨，无用耻为鹏</div><div class="line">description: 有成当作雨，无用耻为鹏</div><div class="line">author: 干锅田鸡           </div><div class="line">language: zh-Hans           <span class="comment"># 设置语言</span></div><div class="line"></div><div class="line">theme : next                <span class="comment"># 将主题修改为next主题</span></div></pre></td></tr></table></figure>
+<h5 id="安装hexo-server"><a href="#安装hexo-server" class="headerlink" title="安装hexo-server"></a>安装hexo-server</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-sever --save  <span class="comment">#3.0以后需要单独安装server模块，用于在本地调试</span></div></pre></td></tr></table></figure>
+<h5 id="生成博客"><a href="#生成博客" class="headerlink" title="生成博客"></a>生成博客</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">$ hexo g    <span class="comment"># 生成html页面</span></div><div class="line">$ hexo s    <span class="comment"># 启动hexo-server</span></div><div class="line">```  </div><div class="line">接下来就可以在localhost:4000查看本地的博客效果啦  </div><div class="line"><span class="comment">##### 发布到GitHub</span></div><div class="line"><span class="comment">###### 创建空仓库</span></div><div class="line">![png](http://p1.bpimg.com/567571/a3d733e6da2da263.png)</div><div class="line"><span class="comment">###### 复制仓库地址</span></div><div class="line">![](http://p1.bqimg.com/567571/88e79c94abb1f333.png)</div><div class="line"><span class="comment">###### 修改&lt;font style="background:purple;color:#fff;padding:2px 3px;font-size:12px;font-weight:normal;"&gt;站点配置文件&lt;/font&gt;</span></div><div class="line">```bash</div><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: git@github.com:bigotedWhale/bigotedwhale.github.io.git</div></pre></td></tr></table></figure>
+<h6 id="安装hexo-deployer-git"><a href="#安装hexo-deployer-git" class="headerlink" title="安装hexo-deployer-git"></a>安装hexo-deployer-git</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<h6 id="发布到github"><a href="#发布到github" class="headerlink" title="发布到github"></a>发布到github</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo g</div><div class="line">$ hexo d  <span class="comment"># 发布到git@github.com:bigotedWhale/bigotedwhale.github.io.git</span></div></pre></td></tr></table></figure>
+<h6 id="发布GitHub-page"><a href="#发布GitHub-page" class="headerlink" title="发布GitHub page"></a>发布GitHub page</h6><p><img src="http://i1.piimg.com/567571/8c24cd463701909d.png" alt=""><br>选择主题后发布即可</p>
 
       
     </div>
@@ -547,7 +555,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#简介"><span class="nav-number">2.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装hexo"><span class="nav-number">3.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#创建博客文件夹"><span class="nav-number">4.</span> <span class="nav-text">创建博客文件夹</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#clone主题文件"><span class="nav-number">5.</span> <span class="nav-text">clone主题文件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#简介"><span class="nav-number">2.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装hexo"><span class="nav-number">3.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#创建博客文件夹"><span class="nav-number">4.</span> <span class="nav-text">创建博客文件夹</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#clone主题文件"><span class="nav-number">5.</span> <span class="nav-text">clone主题文件</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#修改站点配置文件"><span class="nav-number">5.1.</span> <span class="nav-text">修改站点配置文件</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装hexo-server"><span class="nav-number">6.</span> <span class="nav-text">安装hexo-server</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#生成博客"><span class="nav-number">7.</span> <span class="nav-text">生成博客</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#安装hexo-deployer-git"><span class="nav-number">7.1.</span> <span class="nav-text">安装hexo-deployer-git</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#发布到github"><span class="nav-number">7.2.</span> <span class="nav-text">发布到github</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#发布GitHub-page"><span class="nav-number">7.3.</span> <span class="nav-text">发布GitHub page</span></a></li></ol></li></ol></div>
             
 
           </div>
