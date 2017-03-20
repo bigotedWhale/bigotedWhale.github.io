@@ -265,6 +265,150 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ganguotianji.me/backbonemodel/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="干锅田鸡">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/whale.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="干锅田鸡">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/backbonemodel/" itemprop="url">
+                  Backbone Model
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-20T22:44:59+08:00">
+                2017-03-20
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-pencil"></i>
+              </span>
+              
+                <span class="post-meta-item-text">作者 干锅田鸡</span>
+              
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/backbonemodel/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="backbonemodel/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Backbone模型包含应用程序里的数据和相关的处理逻辑</p>
+<h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><p>创建一个新模型实例时，initialize()方法会被调用，该方法是可选的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ToDoModel = Backbone.Model.extend(&#123;</div><div class="line">    <span class="attr">initialize</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'This Model has been initialized'</span>);</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.attributes);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"><span class="comment">// This Model has been initialized</span></div><div class="line"><span class="keyword">var</span> todo = <span class="keyword">new</span> ToDoModel();</div></pre></td></tr></table></figure></p>
+<h4 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Person = Backbone.Model.extend(&#123;</div><div class="line">    <span class="attr">defaults</span>:&#123;</div><div class="line">        <span class="attr">name</span>:<span class="string">"yangpc"</span>,</div><div class="line">        <span class="attr">age</span>:<span class="number">18</span></div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person();</div><div class="line"><span class="comment">// &#123;"name":"yangpc",age:18&#125;</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(person));</div></pre></td></tr></table></figure>
+<h4 id="赋值与取值"><a href="#赋值与取值" class="headerlink" title="赋值与取值"></a>赋值与取值</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Person = Backbone.Model.extend(&#123;</div><div class="line">    <span class="attr">defaults</span>:&#123;</div><div class="line">        <span class="attr">name</span>:<span class="string">"yangpc"</span>,</div><div class="line">        <span class="attr">age</span>:<span class="number">18</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">setName</span>:<span class="function"><span class="keyword">function</span>(<span class="params">newName</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.set(<span class="string">'name'</span>,newName);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> Person();</div><div class="line">p1.set(<span class="string">'name'</span>,<span class="string">'xiaomin'</span>);</div><div class="line">p1.setName(<span class="string">'xiaohong'</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(p1.get(<span class="string">'name'</span>));</div></pre></td></tr></table></figure>
+<h4 id="监听模型变化"><a href="#监听模型变化" class="headerlink" title="监听模型变化"></a>监听模型变化</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Person = Backbone.Model.extend(&#123;</div><div class="line">    <span class="attr">defaults</span>:&#123;</div><div class="line">        <span class="attr">name</span>:<span class="string">"yangpc"</span>,</div><div class="line">        <span class="attr">sex</span>:<span class="string">"male"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">initialize</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        </div><div class="line">        <span class="keyword">this</span>.on(<span class="string">'change:name'</span>,<span class="function"><span class="keyword">function</span> (<span class="params">model</span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'Attribute Name has changed once'</span>);</div><div class="line">            <span class="built_in">console</span>.log(model)</div><div class="line">        &#125;);</div><div class="line">        <span class="comment">// 绑定两次</span></div><div class="line">        <span class="keyword">this</span>.on(<span class="string">'change:name'</span>,<span class="function"><span class="keyword">function</span> (<span class="params">model</span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'Attribute Name has changed twice'</span>);</div><div class="line">            <span class="built_in">console</span>.log(model)</div><div class="line">        &#125;);</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">setName</span>:<span class="function"><span class="keyword">function</span> (<span class="params">newName</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.set(<span class="string">'name'</span>,newName);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"><span class="comment">// 两个绑定的change都会触发</span></div><div class="line"><span class="keyword">new</span> Person().setName(<span class="string">'xiaoming'</span>);</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://ganguotianji.me/poem1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -598,169 +742,6 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://ganguotianji.me/poem2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="干锅田鸡">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/whale.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="干锅田鸡">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/poem2/" itemprop="url">
-                  夜起
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T17:32:57+08:00">
-                2017-03-17
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-pencil"></i>
-              </span>
-              
-                <span class="post-meta-item-text">作者 干锅田鸡</span>
-              
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/poem/" itemprop="url" rel="index">
-                    <span itemprop="name">poem</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/poem2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="poem2/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><center>空空不得闻黄鸡，夜起阑干几处稀。江中若无东流水，此岸不知彼岸离。</center><br><br><br><br><br><br><br><br><br><br></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://ganguotianji.me/poem3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -887,6 +868,169 @@
 <p><center>鸿鹄已随青天去，孤雁亦沉湖。</center></p>
 <p><center>静时冷，闹时虚，犹望风来驱。</center></p>
 <p><center>夜来纵有暖棉敷，哪得睡意足？</center><br><br><br><br><br><br><br><br><br><br></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ganguotianji.me/poem2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="干锅田鸡">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/whale.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="干锅田鸡">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/poem2/" itemprop="url">
+                  夜起
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T17:32:57+08:00">
+                2017-03-17
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-pencil"></i>
+              </span>
+              
+                <span class="post-meta-item-text">作者 干锅田鸡</span>
+              
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/poem/" itemprop="url" rel="index">
+                    <span itemprop="name">poem</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/poem2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="poem2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><center>空空不得闻黄鸡，夜起阑干几处稀。江中若无东流水，此岸不知彼岸离。</center><br><br><br><br><br><br><br><br><br><br></p>
 
           
         
@@ -1302,7 +1446,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1324,7 +1468,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
