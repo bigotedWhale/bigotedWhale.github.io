@@ -4,17 +4,17 @@
 
     
   <url>
-    <loc>http://ganguotianji.me/es6/</loc>
-    <lastmod>2017-04-21T10:19:32.000Z</lastmod>
+    <loc>http://ganguotianji.me/poem5/</loc>
+    <lastmod>2017-04-27T10:15:35.000Z</lastmod>
     <data>
         <display>
-        <title>ES6介绍</title>
-        <pubTime>2017-04-21T10:19:32.000Z</pubTime>
+        <title>醉思仙</title>
+        <pubTime>2017-04-27T10:15:35.000Z</pubTime>
         
          
            
              
-              <breadCrumb title="ES6" url="http://ganguotianji.me/categories/ES6/"/>
+              <breadCrumb title="poem" url="http://ganguotianji.me/categories/poem/"/>
           
         </display>
     </data>
@@ -22,15 +22,52 @@
 
     
   <url>
+    <loc>http://ganguotianji.me/vuecomponent/</loc>
+    <lastmod>2017-04-27T10:02:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>【vue之路】vue组件</title>
+        <pubTime>2017-04-27T10:02:20.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ganguotianji.me/vuecli/</loc>
-    <lastmod>2017-04-12T09:50:08.000Z</lastmod>
+    <lastmod>2017-04-27T02:58:26.000Z</lastmod>
     <data>
         <display>
         <title>【vue之路】vue-cli构建项目</title>
-        <pubTime>2017-04-12T09:50:08.000Z</pubTime>
+        <pubTime>2017-04-27T02:58:26.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ganguotianji.me/es6/</loc>
+    <lastmod>2017-04-21T10:29:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>ES6介绍</title>
+        <pubTime>2017-04-21T10:29:18.000Z</pubTime>
         
          
            
+             
+              <breadCrumb title="ES6" url="http://ganguotianji.me/categories/ES6/"/>
+          
         </display>
     </data>
     </url>
@@ -79,24 +116,6 @@
 
     
   <url>
-    <loc>http://ganguotianji.me/poem5/</loc>
-    <lastmod>2017-03-17T09:33:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>醉思仙</title>
-        <pubTime>2017-03-17T09:33:08.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="poem" url="http://ganguotianji.me/categories/poem/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ganguotianji.me/poem1/</loc>
     <lastmod>2017-03-17T09:33:08.000Z</lastmod>
     <data>
@@ -115,11 +134,11 @@
 
     
   <url>
-    <loc>http://ganguotianji.me/poem3/</loc>
+    <loc>http://ganguotianji.me/poem2/</loc>
     <lastmod>2017-03-17T09:32:57.000Z</lastmod>
     <data>
         <display>
-        <title>寒</title>
+        <title>夜起</title>
         <pubTime>2017-03-17T09:32:57.000Z</pubTime>
         
          
@@ -133,11 +152,11 @@
 
     
   <url>
-    <loc>http://ganguotianji.me/poem2/</loc>
+    <loc>http://ganguotianji.me/poem3/</loc>
     <lastmod>2017-03-17T09:32:57.000Z</lastmod>
     <data>
         <display>
-        <title>夜起</title>
+        <title>寒</title>
         <pubTime>2017-03-17T09:32:57.000Z</pubTime>
         
          

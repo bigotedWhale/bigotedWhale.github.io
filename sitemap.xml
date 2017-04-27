@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://ganguotianji.me/es6/</loc>
+    <loc>http://ganguotianji.me/poem5/</loc>
     
-    <lastmod>2017-04-21T10:19:32.000Z</lastmod>
+    <lastmod>2017-04-27T10:15:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ganguotianji.me/vuecomponent/</loc>
+    
+    <lastmod>2017-04-27T10:02:20.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://ganguotianji.me/vuecli/</loc>
     
-    <lastmod>2017-04-12T09:50:08.000Z</lastmod>
+    <lastmod>2017-04-27T02:58:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ganguotianji.me/es6/</loc>
+    
+    <lastmod>2017-04-21T10:29:18.000Z</lastmod>
     
   </url>
   
@@ -30,13 +44,6 @@
   </url>
   
   <url>
-    <loc>http://ganguotianji.me/poem5/</loc>
-    
-    <lastmod>2017-03-17T09:33:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ganguotianji.me/poem1/</loc>
     
     <lastmod>2017-03-17T09:33:08.000Z</lastmod>
@@ -44,14 +51,14 @@
   </url>
   
   <url>
-    <loc>http://ganguotianji.me/poem3/</loc>
+    <loc>http://ganguotianji.me/poem2/</loc>
     
     <lastmod>2017-03-17T09:32:57.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ganguotianji.me/poem2/</loc>
+    <loc>http://ganguotianji.me/poem3/</loc>
     
     <lastmod>2017-03-17T09:32:57.000Z</lastmod>
     
@@ -65,14 +72,14 @@
   </url>
   
   <url>
-    <loc>http://ganguotianji.me/categories/index.html</loc>
+    <loc>http://ganguotianji.me/tags/index.html</loc>
     
     <lastmod>2017-03-17T08:17:21.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ganguotianji.me/tags/index.html</loc>
+    <loc>http://ganguotianji.me/categories/index.html</loc>
     
     <lastmod>2017-03-17T08:17:21.000Z</lastmod>
     
