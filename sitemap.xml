@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ganguotianji.me/three_js_line/</loc>
+    
+    <lastmod>2017-05-25T08:48:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ganguotianji.me/poem5/</loc>
     
     <lastmod>2017-04-27T10:15:35.000Z</lastmod>
@@ -72,14 +79,14 @@
   </url>
   
   <url>
-    <loc>http://ganguotianji.me/tags/index.html</loc>
+    <loc>http://ganguotianji.me/categories/index.html</loc>
     
     <lastmod>2017-03-17T08:17:21.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ganguotianji.me/categories/index.html</loc>
+    <loc>http://ganguotianji.me/tags/index.html</loc>
     
     <lastmod>2017-03-17T08:17:21.000Z</lastmod>
     
